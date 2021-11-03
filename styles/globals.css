@@ -1,0 +1,89 @@
+.nav-wrap {
+  position: relative;
+}
+.scroll-nav {
+  width: 100%;
+  background: #555; /* メニューの背景色 */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* 慣性スクロール */
+}
+.scroll-nav ul {
+  max-width: 1060px; /* メニューの最大幅 */
+  min-width: 770px; /* メニューの最小幅 */
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  list-style: none;
+  padding-right: 25px; /* 右側の固定分余白を空ける */
+}
+.scroll-nav ul li {
+  float: left;
+  width: 110px; /* メニューの個別の幅 */
+  text-align: center;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.scroll-nav ul li + li {
+    border-left: none;
+}
+
+.scroll-nav ul li:hover {
+  background: #222; /* マウスホバー時の背景色 */
+}
+.scroll-nav ul li a {
+  display: inline-block;
+  color: #fff; /* メニューの文字色 */
+  text-decoration: none;
+}
+.next-btn { /* 右側に固定する部分 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px; /* 固定部分の幅 */
+  height: 40px; /* メニューの高さに合わせる */
+  line-height: 40px;
+  background: #fff;
+  color: #555;
+}
+@media only screen and (min-width: 771px) { /* PCサイズでの指定 */
+    .scroll-nav ul {
+      padding: 0;
+    }
+    .scroll-nav ul li {
+      width: 14.2%; /* メニューの個別の幅 */
+    }
+    .next-btn {
+      display: none; /* 右側の固定部分を非表示 */
+    }
+}
+
+.article-list ul {
+  list-style: none;
+  padding:10px;
+}
+
+.article-list ul li{
+  padding:5px;
+  margin-bottom:10px;
+}
+
+.article-list ul li a{
+    text-decoration: none;
+}
+.article-list .article-link {
+    border:solid 1px #CCC;
+}
+
+.article-list .article-link .description{
+    margin-top:5px;
+    font-size:12px;
+    color:#999;
+}
+
+.article-list .article-link .date{
+    text-align:right;
+    font-size:12px;
+    color:#999;
+}
