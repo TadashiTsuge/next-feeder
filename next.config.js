@@ -4,7 +4,7 @@ const runtimeCaching = require("next-pwa/cache");
 
 const isProd = process.env.NODE_ENV == 'production';
 
-const url = isProd ? 'https://sub0000545227.hmk-temp.com/feeder' : '';
+const url = isProd ? '' : '';
 
 module.exports = withPWA({
   reactStrictMode: true,
