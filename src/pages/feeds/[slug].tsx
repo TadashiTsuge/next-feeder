@@ -49,14 +49,7 @@ export default function Feed({ feed, items }) {
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: FEEDS.map((feed) => ({ params: { slug: feed.slug } })),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const feed = FEEDS.find((feed) => feed.slug === params.slug);
   const detailedFeed = await getFeed(feed.url);
 
@@ -64,7 +57,6 @@ export async function getStaticProps({ params }) {
     props: {
       feed,
       items: detailedFeed.items,
-    },
-    revalidate: 1,
+    }
   };
 }
