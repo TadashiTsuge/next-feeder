@@ -8,7 +8,7 @@ const {publicRuntimeConfig} = getConfig();
 export default function Feed({ feed, items }) {
   return (
     <div className="">
-      <div className="">
+      <div className="header">
         <h1 className="">IT RSS Feeds</h1>
         <div className="nav-wrap">
           <div className="scroll-nav">
